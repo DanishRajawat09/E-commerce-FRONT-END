@@ -9,9 +9,9 @@ const DressStyle = () => {
       <div className='container dressStyleContainer'>
         <h1 className='commonHeading'>BROWSE BY DRESS STYLE</h1>
         <div className="styleContainer grid">
-<div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100"
+<div data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100"
 className='casual style'>Casual</div>
-<div data-aos="fade-left" data-aos-duration="1500" 
+<div data-aos="fade-right" data-aos-duration="1500" 
 data-aos-delay="200" className='formal style'>Formal</div>
 <div  data-aos="fade-right" data-aos-duration="1500" 
 data-aos-delay="300"  className='party style'>Party</div>
