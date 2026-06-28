@@ -19,7 +19,8 @@ const productData = createSlice({
             productPrice : action.payload.price,
             productActualPrice : action.payload.actualPrice,
             productRatingImg : action.payload.starImg,
-            productDesc : action.payload.desc
+            productDesc : action.payload.desc,
+            productDetails : action.payload.productDetails
             }
             state.shift()
             state.push(product)

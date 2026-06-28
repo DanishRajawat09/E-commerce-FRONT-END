@@ -18,9 +18,149 @@
     border-bottom: 1px solid black;
 }
 
-.detailsSlide{
-    background-color: red;
-    height: 100%;
+.detailsSlide {
+    padding-block: 24px;
+    min-height: 400px;
+}
+
+.productDetailsContent {
+    padding-bottom: 32px;
+}
+
+.specificationsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.specItem {
+    border: 1px solid #00000019;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.specLabel {
+    font-size: 13px;
+    color: #00000096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.specValue {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.detailsInfoGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.detailsInfoCard {
+    background-color: var(--searchBar);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.detailsSubHeading {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.detailsInfoCard p,
+.careInstructions p {
+    color: #00000096;
+    line-height: 1.6;
+}
+
+.featuresList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.featuresList li {
+    padding-left: 20px;
+    position: relative;
+    color: #00000096;
+    line-height: 1.5;
+}
+
+.featuresList li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: black;
+    font-weight: bold;
+}
+
+.careInstructions {
+    border-top: 1px solid #00000019;
+    padding-top: 24px;
+}
+
+.noDetailsText {
+    color: #00000096;
+    padding: 40px 0;
+}
+
+.faqSubText {
+    color: #00000096;
+    margin-top: 4px;
+}
+
+.faqArea {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.faqCard {
+    border: 1px solid #00000019;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.faqCard.faqOpen {
+    border-color: black;
+}
+
+.faqQuestion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+.faqToggle {
+    font-size: 20px;
+    font-weight: 300;
+    flex-shrink: 0;
+}
+
+.faqAnswer {
+    padding: 0 24px 20px;
+    color: #00000096;
+    line-height: 1.6;
+    font-size: 14px;
 }
 .reviewSlide{
    padding-block: 0px;
@@ -82,9 +222,6 @@
 }
 .FAQsSlide{
     padding-top: 0;
-}
-.faqArea{
-    grid-template-columns: repeat(2 , 1fr);
 }
 
 
@@ -176,6 +313,14 @@
         font-size: 12px;
          color: #00000096;
      }
+  }
+
+  @media screen and (width < 768px) {
+    .specificationsGrid,
+    .detailsInfoGrid,
+    .faqArea {
+        grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   @media screen and (width < 500px) {

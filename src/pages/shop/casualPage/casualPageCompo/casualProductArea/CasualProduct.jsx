@@ -9,10 +9,8 @@ const CasualProduct = () => {
 
   const dispatch = useDispatch()
 
-const handleProduct = (id , title , desc , price , img , actualPrice , starImg , rating) => {
-  console.log("");
-  
- dispatch(addProduct({id,img,title,rating,price,actualPrice,starImg , desc}))
+const handleProduct = (id , title , desc , price , img , actualPrice , starImg , rating , productDetails) => {
+ dispatch(addProduct({id,img,title,rating,price,actualPrice,starImg , desc, productDetails}))
 }
 
 
@@ -24,9 +22,9 @@ const handleProduct = (id , title , desc , price , img , actualPrice , starImg ,
       </div>
       <div className="productGrid grid">
     
-        {productApi.map(({id , title , desc,  price , images , actualPrice , ratingImg , rating}) => (
+        {productApi.map(({id , title , desc,  price , images , actualPrice , ratingImg , rating , productDetails}) => (
           <Link  key={id}  to={"/productDetails"} className='productLink'>
-          <div className="CPCard " onClick={() => { handleProduct( id, title , desc , price , images , actualPrice , ratingImg , rating ) }}>
+          <div className="CPCard " onClick={() => { handleProduct( id, title , desc , price , images , actualPrice , ratingImg , rating , productDetails ) }}>
             <div className="CPCardImg">
               <img src={images[0]} alt={title} />
             </div>

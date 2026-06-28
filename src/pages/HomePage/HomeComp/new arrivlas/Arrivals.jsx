@@ -54,9 +54,9 @@ const Arrivals = ({heading , product}) => {
       <div  className='container arrivalContainer'>
         <h1  className='commonHeading'>{heading}</h1>
         <Slider {...settings} >
-        {product.map(({ id , title , price , images , ratingImg , rating , actualPrice, desc}) => (
+        {product.map(({ id , title , price , images , ratingImg , rating , actualPrice, desc, productDetails}) => (
           <div key={id} className="arrivalsProducts grid">
-          <Products id={id} img={images} title={title}  starImg={ratingImg} rating={rating} price={price} actualPrice={actualPrice && actualPrice} desc={desc} />
+          <Products id={id} img={images} title={title}  starImg={ratingImg} rating={rating} price={price} actualPrice={actualPrice && actualPrice} desc={desc} productDetails={productDetails} />
           </div>
         ))}
         </Slider>

@@ -3,17 +3,15 @@ import "./products.css"
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import {addProduct} from "../../../../features/productData"
-const Products = ({id, img, title, starImg, price, rating , actualPrice , desc  }) => {
+const Products = ({id, img, title, starImg, price, rating , actualPrice , desc , productDetails }) => {
     const dispatch =  useDispatch()
-    const handleProducts = (img , title , starImg , price , rating , actualPrice , desc) => {
-    
-        dispatch(addProduct({id,img,title,rating,price,actualPrice,starImg , desc}))
-      
+    const handleProducts = (img , title , starImg , price , rating , actualPrice , desc , productDetails) => {
+        dispatch(addProduct({id,img,title,rating,price,actualPrice,starImg , desc, productDetails}))
     }
     
     return (
         <Link to={"/productDetails"} className='productLink'>
-        <div onClick={() => { handleProducts(img , title , starImg , price , rating , actualPrice , desc) }} className="products ">
+        <div onClick={() => { handleProducts(img , title , starImg , price , rating , actualPrice , desc , productDetails) }} className="products ">
             <div className="productImg">
                 <img className='mainImg' src={img} alt={title} />
             </div>
