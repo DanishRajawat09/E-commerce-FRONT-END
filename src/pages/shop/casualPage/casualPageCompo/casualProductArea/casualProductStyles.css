@@ -17,6 +17,12 @@ padding-right: 20px;
     justify-content: space-between;
     align-items: center;
 }
+.noProductsMessage{
+    grid-column: 1 / -1;
+    color: #00000096;
+    font-size: 18px;
+    padding: 40px 0;
+}
 .CPCardImg img{
     border-radius: 20px;
     -webkit-border-radius: 20px;

@@ -21,6 +21,54 @@ margin-block: 24px;
 .filterLinks div{
     color: #00000099;
 }
+.filterLinkBtn{
+    background-color: transparent;
+    border: none;
+    color: #00000099;
+    text-align: start;
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+.filterLinkBtn.filterActive,
+.styleBtn.filterActive{
+    color: black;
+    font-weight: 700;
+}
+.filterOverlay{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 4;
+}
+.colorSelectArea{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.colorSwatch{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #00000019;
+    cursor: pointer;
+    padding: 0;
+}
+.colorSwatch.colorSelected{
+    border: 3px solid black;
+    box-shadow: 0 0 0 2px white inset;
+}
+.clearFilterBtn{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    margin-top: 12px;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 62px;
+    cursor: pointer;
+}
 .rangeValue{
     margin-top: 10px;
 }
@@ -113,8 +161,9 @@ margin-block: 24px;
   
 }
 @media screen and (width > 1280px) {
-  .filterArrowLeft{
-display: none;
+  .filterArrowLeft,
+  .filterOverlay{
+    display: none;
   }
 }
 @media screen and (width < 976px) {
